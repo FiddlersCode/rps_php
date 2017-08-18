@@ -14,7 +14,12 @@ class Scissors {
 
 class Game {
   public function evaluates($choiceOne, $choiceTwo) {
-    return 'Draw';
+    if (get_class($choiceOne) == get_class($choiceTwo)) {
+      return 'Draw';
+    }
+    else {
+      return $choiceOne;
+    }
   }
 }
 
