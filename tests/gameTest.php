@@ -6,8 +6,9 @@ require './src/game.php';
 
 class GameTest extends TestCase {
   public function testCheckType() {
+    $game = new Game();
     $rock = new Rock();
-    $this->assertEquals(get_class($rock), "Rock");
+    $this->assertEquals($game->evaluates($rock, $rock), "Draw");
   }
 }
 
